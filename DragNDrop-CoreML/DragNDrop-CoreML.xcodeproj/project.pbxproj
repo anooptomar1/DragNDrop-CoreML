@@ -12,6 +12,9 @@
 		A7D0752E1F754DDC007EFE8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D0752C1F754DDC007EFE8C /* Main.storyboard */; };
 		A7D075301F754DDC007EFE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D0752F1F754DDC007EFE8C /* Assets.xcassets */; };
 		A7D075331F754DDC007EFE8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D075311F754DDC007EFE8C /* LaunchScreen.storyboard */; };
+		A7D0753C1F7550B3007EFE8C /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A7D0753B1F7550A8007EFE8C /* Inceptionv3.mlmodel */; };
+		A7D075401F7550DE007EFE8C /* CoreMLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0753F1F7550DA007EFE8C /* CoreMLHelper.swift */; };
+		A7D075421F7550F7007EFE8C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D075411F7550F5007EFE8C /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		A7D0752F1F754DDC007EFE8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7D075321F754DDC007EFE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7D075341F754DDC007EFE8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7D0753B1F7550A8007EFE8C /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		A7D0753F1F7550DA007EFE8C /* CoreMLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMLHelper.swift; sourceTree = "<group>"; };
+		A7D075411F7550F5007EFE8C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		A7D075271F754DDC007EFE8C /* DragNDrop-CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				A7D0753E1F7550C6007EFE8C /* Helpers */,
+				A7D0753D1F7550C0007EFE8C /* ViewModel */,
+				A7D0753A1F755089007EFE8C /* Model */,
 				A7D075281F754DDC007EFE8C /* AppDelegate.swift */,
 				A7D0752A1F754DDC007EFE8C /* ViewController.swift */,
 				A7D0752C1F754DDC007EFE8C /* Main.storyboard */,
@@ -62,6 +71,30 @@
 				A7D075341F754DDC007EFE8C /* Info.plist */,
 			);
 			path = "DragNDrop-CoreML";
+			sourceTree = "<group>";
+		};
+		A7D0753A1F755089007EFE8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0753B1F7550A8007EFE8C /* Inceptionv3.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A7D0753D1F7550C0007EFE8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A7D075411F7550F5007EFE8C /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A7D0753E1F7550C6007EFE8C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0753F1F7550DA007EFE8C /* CoreMLHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D075421F7550F7007EFE8C /* ViewModel.swift in Sources */,
 				A7D0752B1F754DDC007EFE8C /* ViewController.swift in Sources */,
+				A7D0753C1F7550B3007EFE8C /* Inceptionv3.mlmodel in Sources */,
 				A7D075291F754DDC007EFE8C /* AppDelegate.swift in Sources */,
+				A7D075401F7550DE007EFE8C /* CoreMLHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

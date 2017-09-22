@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let viewModel = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        CoreMLHelper.setModelImages(with: CGSize(width: 149.5, height: 149.5))
         view.addInteraction(UIDropInteraction(delegate: self))
     }
 
@@ -33,6 +36,8 @@ extension ViewController: UIDropInteractionDelegate {
                 guard let draggedImage = object as? UIImage else {
                     return
                 }
+                
+                print(self.viewModel.classify(image: draggedImage))
                 
                 DispatchQueue.main.async {
                     let imageView = UIImageView(image: draggedImage)
